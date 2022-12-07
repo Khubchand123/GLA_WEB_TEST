@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="main">
         <div class="s1">
@@ -25,7 +27,9 @@
         </div>
         <div class="s2">
             <div class="a5">
-                <button id="a"><p style="font-size: 10px;">+</button>
+                <button id="a">
+                    <p style="font-size: 10px;">+
+                </button>
             </div>
             <div class="a6">
                 <button>Delete</button>
@@ -34,6 +38,18 @@
     </div>
     <div class="add">
     </div>
-    <script src="script.js"></script>
+    <script>
+        let con = document.querySelector(".add");
+        let but = document.querySelector("#a");
+        but.addEventListener('click', () => {
+            console.log("hi")
+            let div = document.createElement('div');
+            div.classList.add("a7");
+            // div.classList.add(".a8");
+            con.appendChild(div);
+        })
+
+    </script>
 </body>
+
 </html>
