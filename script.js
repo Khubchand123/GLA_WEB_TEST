@@ -1,11 +1,10 @@
-const myPromise = Promise.resolve(Promise.resolve('Promise'));
+let con = document.querySelector(".add");
+let but = document.querySelector("#a");
+but.addEventListener('click',()=>{
+    console.log("hi")
+    let div = document.createElement('div');
+    div.classList.add("a7");
+    // div.classList.add(".a8");
+    con.appendChild(div);
+})
 
-function funcOne() { setTimeout(() => console.log('Timeout 1!'), 0); myPromise.then(res => res).then(res => console.log(`${res} 1!`)); console.log('Last line 1!'); }
-
-async function funcTwo() { 
-    const res = await myPromise; 
-    console.log(`${res} 2!`); 
-    setTimeout(() => console.log('Timeout 2!'), 0); 
-    console.log('Last line 2!'); }
-
-funcOne(); funcTwo();
